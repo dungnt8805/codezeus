@@ -37,10 +37,11 @@ $di->set('view', function () use ($config) {
 
             $volt = new VoltEngine($view, $di);
 
-            $volt->setOptions(array(
+            $volt->setOptions([
                 'compiledPath' => $config->application->cacheDir,
-                'compiledSeparator' => '_'
-            ));
+                'compiledSeparator' => '_',
+                'compileAlways' => true // For dev, this doesnt cache
+            ]);
 
             return $volt;
         },
@@ -54,12 +55,12 @@ $di->set('view', function () use ($config) {
  * Database connection is created based in the parameters defined in the configuration file
  */
 $di->set('db', function () use ($config) {
-    return new DbAdapter(array(
+    return new DbAdapter([
         'host' => $config->database->host,
         'username' => $config->database->username,
         'password' => $config->database->password,
         'dbname' => $config->database->dbname
-    ));
+    ]);
 });
 
 /**
@@ -77,4 +78,9 @@ $di->set('session', function () {
     $session->start();
 
     return $session;
+});
+
+
+$di->set('flash', function () {
+    return new \Phalcon\Flash\Session();
 });

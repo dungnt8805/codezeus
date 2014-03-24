@@ -1,3 +1,7 @@
-<h1>Congratulations!</h1>
+{% extends "templates/base.volt" %}
 
-<p>You're now flying with Phalcon. Great things are about to happen!</p>
+{% block content %}
+<h1>CodeZues</h1>
+
+<p>Muahaha</p>
+{% endblock %}
