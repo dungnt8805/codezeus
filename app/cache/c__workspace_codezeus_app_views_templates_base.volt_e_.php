@@ -1,11 +1,14 @@
-a:7:{i:0;s:189:"<!doctype html>
+a:7:{i:0;s:405:"<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
     <?php echo $this->tag->getTitle(); ?>
     <link rel="stylesheet" href="/third-party/bootstrap/css/bootstrap.min.css">
+    <script src="/third-party/angular/js/angular-1.3.min.js"></script>
+    <script src="/third-party/jquery/js/jquery-2.1.0.min.js"></script>
+    <script src="/third-party/bootstrap/js/bootstrap.min.js"></script>
     ";s:4:"head";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:6:"
-    ";s:4:"file";s:68:"C:\workspace\codezeus\app\config/../../app/views/templates/base.volt";s:4:"line";i:8;}}i:1;s:1021:"
+    ";s:4:"file";s:68:"C:\workspace\codezeus\app\config/../../app/views/templates/base.volt";s:4:"line";i:11;}}i:1;s:1021:"
 </head>
 <body>
 

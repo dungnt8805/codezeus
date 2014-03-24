@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     {{ get_title() }}
     <link rel="stylesheet" href="/third-party/bootstrap/css/bootstrap.min.css">
+    <script src="/third-party/angular/js/angular-1.3.min.js"></script>
+    <script src="/third-party/jquery/js/jquery-2.1.0.min.js"></script>
+    <script src="/third-party/bootstrap/js/bootstrap.min.js"></script>
     {% block head %}
     {% endblock %}
 </head>
