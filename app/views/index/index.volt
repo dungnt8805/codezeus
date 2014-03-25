@@ -15,6 +15,20 @@
 
     <hr />
 
+    <h3>The CodeZues Philosophy</h3>
+    <p>
+        We are a humble group carrying our learning scrolls seeking the path to software mastery.
+        We speak softly in the midsts of Zeus. Not a single pupil has an all-star aura, we share our
+        accomplishments. 
+    </p>
+    <p>
+        We are a disciplined folk whom follow the wise grey-beard. We shall persevere under the changing
+        technologies like rumbling thunder and Poseidon's tides.
+    </p>
+        
+
+    <hr />
+
     <p><a href="http://github.com/codezeus">GitHub</a></p>
 </div>
 
