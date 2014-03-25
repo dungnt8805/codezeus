@@ -6,9 +6,7 @@ CodeZeus
 ###Phalcon DevTools
 
 - Locally get: [Phalcon DevTools](https://github.com/phalcon/phalcon-devtools)
-- Run in CLI:
-
-    $ phalcon
+- Run in CLI: `$ phalcon`
 
 
 ---
