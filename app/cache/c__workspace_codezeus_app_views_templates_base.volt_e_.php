@@ -1,14 +1,16 @@
-a:7:{i:0;s:405:"<!doctype html>
+a:7:{i:0;s:540:"<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
-    <?php echo $this->tag->getTitle(); ?>
+    <title>Code Zeus</title>
     <link rel="stylesheet" href="/third-party/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
     <script src="/third-party/angular/js/angular-1.3.min.js"></script>
     <script src="/third-party/jquery/js/jquery-2.1.0.min.js"></script>
     <script src="/third-party/bootstrap/js/bootstrap.min.js"></script>
     ";s:4:"head";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:6:"
-    ";s:4:"file";s:68:"C:\workspace\codezeus\app\config/../../app/views/templates/base.volt";s:4:"line";i:11;}}i:1;s:1021:"
+    ";s:4:"file";s:68:"C:\workspace\codezeus\app\config/../../app/views/templates/base.volt";s:4:"line";i:13;}}i:1;s:923:"
 </head>
 <body>
 
@@ -24,17 +26,12 @@ a:7:{i:0;s:405:"<!doctype html>
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="<?php echo $this->url->get(); ?>">
-                    CodeZeus
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-responsive-collapse">
-                <ul>
-    <li>Link</li>
-    <li>Link</li>
-    <li>Link</li>
-</ul>
+                
             </div><!-- /navbar-collapse -->
         </div>
     </div>
