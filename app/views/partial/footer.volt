@@ -1,9 +1,9 @@
-<div class="ui inverted red page grid segment">
-<div class="ten wide column">
-    <!-- <div class="ui three column stackable grid">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-  </div> -->
+<div id="footer" class="ui grid">
+<div class="twelve wide column">
+    <div class="ui one column floated right">
+        <div class="column">
+            <small>CodeZeus &copy<?=date('Y')?></small>
+        </div>
+  </div>
 </div>
 </div>

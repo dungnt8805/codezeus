@@ -15,7 +15,7 @@ body {
 }
 
 a {
-  color: #5C6166;
+  color: #472168;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -23,4 +23,17 @@ a {
 
 a:hover {
   color: #848484;
+}
+
+span.fname {
+    font-weight: normal;
+}
+
+.main-github {
+    text-align: center !important;
+    padding-top: 45px;
+}
+
+#footer {
+    margin-top: 180px;
 }
