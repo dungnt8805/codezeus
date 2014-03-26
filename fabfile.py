@@ -15,6 +15,20 @@ def pull(branch = 'master'):
     local('git pull origin {0}'.format(branch))
 
 """
+GIT Add/Update/Commit/Push in one line
+
+$ fab commit
+$ fab commit:branch
+"""
+def commit(branch = 'master'):
+    local('git add -u')
+    local('git add .')
+    message = prompt("Commit Message: ")
+    local('git commit -m "{0}"'.format(message))
+    local('git push origin {0}'.format(branch))
+
+
+"""
 Updates the permissions in Linux
 
 $ fab   permissions

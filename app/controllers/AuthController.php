@@ -1,7 +1,11 @@
 <?php
 
-class Test extends \Phalcon\Mvc\Model
+class AuthController extends BaseController
 {
+
+    public function githubAction()
+    {
+    }
 
 }
 

@@ -1,5 +1,8 @@
 <?php
-
+// --------------------------------------------------------------------
+// This must NOT be a LIVE file
+// .gitignore the real credentials
+// --------------------------------------------------------------------
 return new \Phalcon\Config([
     'database' => [
         'adapter'     => 'Mysql',

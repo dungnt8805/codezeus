@@ -1,5 +1,10 @@
 <?php
 // --------------------------------------------------------------------
+// The $config and $api variables are loaded from the inclusions of:
+//      public/index.php file
+// --------------------------------------------------------------------
+
+// --------------------------------------------------------------------
 // Namespaces (Optional)
 // --------------------------------------------------------------------
 use Phalcon\DI\FactoryDefault;
@@ -22,7 +27,6 @@ $di = new FactoryDefault();
 $di->set('url', function () use ($config) {
     $url = new UrlResolver();
     $url->setBaseUri($config->application->baseUri);
-
     return $url;
 }, true);
 
@@ -95,6 +99,14 @@ $di->set('session', function () {
 $di->set('flash', function () {
     return new \Phalcon\Flash\Session();
 });
+
+// --------------------------------------------------------------------
+// For Api Settings
+// --------------------------------------------------------------------
+$di->set('api', function () use ($api) {
+    return new $api;
+});
+
 
 // End of File
 // --------------------------------------------------------------------
