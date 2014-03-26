@@ -1,0 +1,10 @@
+*.pyc
+vendor/*
+.AppleDouble*
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+nbproject
+composer.lock
+
