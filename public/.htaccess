@@ -1,8 +1,9 @@
 AddDefaultCharset UTF-8
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
-</IfModule>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.codezeus.com$ [NC]
+RewriteRule ^(.*)$ http://codezeus.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]

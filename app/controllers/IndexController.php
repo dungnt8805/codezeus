@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends ControllerBase
+class IndexController extends BaseController
 {
 
     public function indexAction()
@@ -10,3 +10,5 @@ class IndexController extends ControllerBase
 
 }
 
+// End of File
+// --------------------------------------------------------------------
