@@ -9,7 +9,7 @@ return new \Phalcon\Config([
         'host'        => 'localhost',
         'username'    => 'root',
         'password'    => '',
-        'dbname'      => 'test',
+        'dbname'      => 'codezeus',
     ],
     'application' => [
         'controllersDir' => __DIR__ . '/../../app/controllers/',
