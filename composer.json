@@ -1,6 +1,7 @@
 {
     "require": {
         "cartalyst/sentry": "v2.1.1",
-        "tijsverkoyen/akismet": "1.1.0"
+        "tijsverkoyen/akismet": "1.1.0",
+        "guzzle/guzzle": "v3.8.1"
     }
 }
