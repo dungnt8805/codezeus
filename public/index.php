@@ -6,6 +6,30 @@ error_reporting(E_ALL);
 try {
 
     // --------------------------------------------------------------------
+    // Load Composer
+    // --------------------------------------------------------------------
+    $autoload_file = "../vendor/autoload.php";
+    if (!file_exists($autoload_file)) {
+        throw new \Exception('$ composer install');
+    }
+
+    require_once $autoload_file;
+
+    // --------------------------------------------------------------------
+    // Load Live Files
+    // --------------------------------------------------------------------
+    $live_config_file = "../app/config/live-config.php";
+    $live_api_file = "../app/config/live-api.php";
+
+    if (file_exists($live_config_file)) {
+        require_once $live_config_file;
+    }
+
+    if (file_exists($live_api_file)) {
+        require_once $live_api_file;
+    }
+
+    // --------------------------------------------------------------------
     // Read the configuration
     // --------------------------------------------------------------------
     $config = include __DIR__ . "/../app/config/config.php";
