@@ -16,6 +16,12 @@ try {
     require_once $autoload_file;
 
     // --------------------------------------------------------------------
+    // Read the configuration
+    // --------------------------------------------------------------------
+    $config = include __DIR__ . "/../app/config/config.php";
+    $api    = include __DIR__ . "/../app/config/api.php";
+
+    // --------------------------------------------------------------------
     // Load Live Files
     // --------------------------------------------------------------------
     $local_config_file = "../app/config/local-config.php";
@@ -33,12 +39,6 @@ try {
     if (file_exists($live_api_file)) {
         require_once $live_api_file;
     }
-
-    // --------------------------------------------------------------------
-    // Read the configuration
-    // --------------------------------------------------------------------
-    $config = include __DIR__ . "/../app/config/config.php";
-    $api    = include __DIR__ . "/../app/config/api.php";
 
     // --------------------------------------------------------------------
     // Read auto-loader
