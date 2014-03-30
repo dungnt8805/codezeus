@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Code Zeus</title>
-    <link rel="stylesheet" type="text/css" href="/third-party/semantic/css/semantic.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url('third-party/semantic/css/semantic.css') }}">
+    <link rel="stylesheet" href="{{ url('css/style.css') }}">
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
-    <script src="/third-party/angular/js/angular-1.3.min.js"></script>
+    <script src="{{ url('third-party/angular/js/angular-1.3.min.js') }}"></script>
     <!-- <script src="/third-party/jquery/js/jquery-2.1.0.min.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     {% block head %}

@@ -1,6 +1,9 @@
 CodeZeus
 ========
 
+This setup allows you to have multiple phalcon projects in one Vagrant Box.
+I suggest calling it **Playground** :)
+
 - Prefer a Vagrant setup? [phalcon/vagrant](https://github.com/phalcon/vagrant)
 
 ###Phalcon DevTools
@@ -33,16 +36,20 @@ CodeZeus
 ```
 <VirtualHost 127.0.0.1:82>
     ServerName codezeus
-    DocumentRoot "C:\workspace\codezeus\public"
+    DocumentRoot "/vagrant/www/codezeus/public
+    ServerPath /codezeus
 </VirtualHost>
 
-<Directory "C:\workspace\codezeus\public">
+<Directory "/vagrant/www/codezeus/public">
     Options Indexes FollowSymLinks
     AllowOverride All
     Require all granted
 </Directory>
 ```
 
+###Check your BaseURI
+When you access http://playground/codezeus/ if things don't look right, check
+your baseURI.
 
 ---
 CodeZues.com

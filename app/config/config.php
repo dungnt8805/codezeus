@@ -3,6 +3,7 @@
 // This must NOT be a LIVE file
 // .gitignore the real credentials
 // --------------------------------------------------------------------
+
 return new \Phalcon\Config([
     'database' => [
         'adapter'     => 'Mysql',
@@ -18,7 +19,7 @@ return new \Phalcon\Config([
         'pluginsDir'     => __DIR__ . '/../../app/plugins/',
         'libraryDir'     => __DIR__ . '/../../app/library/',
         'cacheDir'       => __DIR__ . '/../../app/cache/',
-        'baseUri'        => '/z/',
+        'baseUri'        => '/codezeus/',
     ]
 ]);
 
