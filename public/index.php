@@ -24,20 +24,15 @@ try {
     // --------------------------------------------------------------------
     // Load Live Files
     // --------------------------------------------------------------------
-    $local_config_file = "../app/config/local-config.php";
     $live_config_file = "../app/config/live-config.php";
     $live_api_file = "../app/config/live-api.php";
 
-    if (file_exists($local_config_file)) {
-        require_once $local_config_file;
-    }
-
     if (file_exists($live_config_file)) {
-        require_once $live_config_file;
+        $config = require_once $live_config_file;
     }
 
     if (file_exists($live_api_file)) {
-        require_once $live_api_file;
+        $api = require_once $live_api_file;
     }
 
     // --------------------------------------------------------------------
