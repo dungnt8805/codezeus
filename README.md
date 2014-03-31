@@ -34,7 +34,7 @@ I suggest calling it **Playground** :)
 - Phalcon Extension Installed
 
 ```
-<VirtualHost 127.0.0.1:82>
+<VirtualHost 127.0.0.1>
     ServerName codezeus
     DocumentRoot "/vagrant/www/codezeus/public
     ServerPath /codezeus
