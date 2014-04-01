@@ -5,85 +5,105 @@ use Phalcon\Db\Index;
 use Phalcon\Db\Reference;
 use Phalcon\Mvc\Model\Migration;
 
-class BlogPostTagMigration_100 extends Migration
+class ThrottleMigration_100 extends Migration
 {
 
     public function up()
     {
         $this->morphTable(
-            'blog_post_tag',
+            'throttle',
             array(
             'columns' => array(
                 new Column(
                     'id',
                     array(
                         'type' => Column::TYPE_INTEGER,
+                        'unsigned' => true,
                         'notNull' => true,
                         'autoIncrement' => true,
-                        'size' => 11,
+                        'size' => 10,
                         'first' => true
                     )
                 ),
                 new Column(
-                    'blog_post_id',
+                    'user_id',
                     array(
                         'type' => Column::TYPE_INTEGER,
+                        'unsigned' => true,
                         'notNull' => true,
-                        'size' => 11,
+                        'size' => 10,
                         'after' => 'id'
                     )
                 ),
                 new Column(
-                    'blog_tag_id',
+                    'ip_address',
+                    array(
+                        'type' => Column::TYPE_VARCHAR,
+                        'size' => 255,
+                        'after' => 'user_id'
+                    )
+                ),
+                new Column(
+                    'attempts',
                     array(
                         'type' => Column::TYPE_INTEGER,
                         'notNull' => true,
                         'size' => 11,
-                        'after' => 'blog_post_id'
+                        'after' => 'ip_address'
                     )
                 ),
                 new Column(
-                    'deleted',
+                    'suspended',
                     array(
-                        'type' => Column::TYPE_BOOLEAN,
+                        'type' => Column::TYPE_INTEGER,
                         'notNull' => true,
-                        'size' => 1,
-                        'after' => 'blog_tag_id'
+                        'size' => 4,
+                        'after' => 'attempts'
                     )
                 ),
                 new Column(
-                    'created_at',
+                    'banned',
                     array(
-                        'type' => Column::TYPE_DATETIME,
-                        'size' => 1,
-                        'after' => 'deleted'
+                        'type' => Column::TYPE_INTEGER,
+                        'notNull' => true,
+                        'size' => 4,
+                        'after' => 'suspended'
                     )
                 ),
                 new Column(
-                    'updated_at',
+                    'last_attempt_at',
                     array(
-                        'type' => Column::TYPE_DATETIME,
+                        'type' => Column::TYPE_DATE,
                         'size' => 1,
-                        'after' => 'created_at'
+                        'after' => 'banned'
                     )
                 ),
                 new Column(
-                    'deleted_at',
+                    'suspended_at',
                     array(
-                        'type' => Column::TYPE_DATETIME,
+                        'type' => Column::TYPE_DATE,
                         'size' => 1,
-                        'after' => 'updated_at'
+                        'after' => 'last_attempt_at'
+                    )
+                ),
+                new Column(
+                    'banned_at',
+                    array(
+                        'type' => Column::TYPE_DATE,
+                        'size' => 1,
+                        'after' => 'suspended_at'
                     )
                 )
             ),
             'indexes' => array(
-                new Index('PRIMARY', array('id'))
+                new Index('PRIMARY', array('id')),
+                new Index('fk_user_id', array('user_id'))
             ),
             'options' => array(
                 'TABLE_TYPE' => 'BASE TABLE',
                 'AUTO_INCREMENT' => '1',
                 'ENGINE' => 'InnoDB',
-                'TABLE_COLLATION' => 'utf8_general_ci'
+                'TABLE_COLLATION' => 'utf8_unicode_ci'
             )
         )
         );

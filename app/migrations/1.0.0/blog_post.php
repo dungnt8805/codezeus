@@ -34,28 +34,21 @@ class BlogPostMigration_100 extends Migration
                     )
                 ),
                 new Column(
-                    'blog_category_id',
+                    'title',
                     array(
-                        'type' => Column::TYPE_INTEGER,
+                        'type' => Column::TYPE_VARCHAR,
                         'notNull' => true,
-                        'size' => 11,
+                        'size' => 100,
                         'after' => 'user_id'
                     )
                 ),
                 new Column(
-                    'blog_tag_group_id',
-                    array(
-                        'type' => Column::TYPE_INTEGER,
-                        'size' => 11,
-                        'after' => 'blog_category_id'
-                    )
-                ),
-                new Column(
-                    'title',
+                    'slug',
                     array(
                         'type' => Column::TYPE_VARCHAR,
-                        'size' => 50,
-                        'after' => 'blog_tag_group_id'
+                        'notNull' => true,
+                        'size' => 150,
+                        'after' => 'title'
                     )
                 ),
                 new Column(
@@ -63,7 +56,7 @@ class BlogPostMigration_100 extends Migration
                     array(
                         'type' => Column::TYPE_TEXT,
                         'size' => 1,
-                        'after' => 'title'
+                        'after' => 'slug'
                     )
                 ),
                 new Column(

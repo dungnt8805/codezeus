@@ -1,21 +1,20 @@
 <?php
-
-class BlogController extends ControllerBase
+namespace Admin;
+class AdminController extends ControllerBase
 {
     // --------------------------------------------------------------------
 
     public function indexAction()
     {
         $this->view->setVars([]);
-        $this->view->pick('blog/index');
+        $this->view->pick('admin/admin');
     }
 
     // --------------------------------------------------------------------
 
-    public function singleAction($slug = false)
+    public function loginAction()
     {
-        $this->view->setVars([]);
-        $this->view->pick('blog/single');
+        echo 1;
     }
 
     // --------------------------------------------------------------------

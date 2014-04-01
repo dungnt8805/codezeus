@@ -1,21 +1,29 @@
 <?php
 
-class BlogController extends ControllerBase
+class UserController extends ControllerBase
 {
     // --------------------------------------------------------------------
 
+    public function onConstruct()
+    {
+        echo 1;
+        die;
+    }
+
     public function indexAction()
     {
-        $this->view->setVars([]);
-        $this->view->pick('blog/index');
+        echo 'Nothing here';
+        die;
     }
 
     // --------------------------------------------------------------------
 
-    public function singleAction($slug = false)
+    public function doLoginAction()
     {
-        $this->view->setVars([]);
-        $this->view->pick('blog/single');
+        $this->request->getPost('username');
+        $this->request->getPost('password');
+        echo 'Pretend post';
+        die;
     }
 
     // --------------------------------------------------------------------

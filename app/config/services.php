@@ -21,6 +21,10 @@ use Phalcon\Session\Adapter\Files as SessionAdapter;
 // --------------------------------------------------------------------
 $di = new FactoryDefault();
 
+$di->set('router', function(){
+    return require __DIR__ . '/routes.php';
+}, true);
+
 // --------------------------------------------------------------------
 // The URL component is used to generate all kind of urls in the application
 // --------------------------------------------------------------------

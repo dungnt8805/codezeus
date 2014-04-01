@@ -1,6 +1,6 @@
 <?php
 
-class User extends BaseModel
+class BlogPost extends BaseModel
 {
 
     // --------------------------------------------------------------

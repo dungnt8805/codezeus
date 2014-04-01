@@ -1,4 +1,5 @@
 <?php
+namespace Admin;
 
 class ControllerBase extends \Phalcon\Mvc\Controller
 {

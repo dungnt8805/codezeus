@@ -7,8 +7,15 @@ $loader = new \Phalcon\Loader();
 // --------------------------------------------------------------------
 $loader->registerDirs([
         $config->application->controllersDir,
-        $config->application->modelsDir
-])->register();
+        $config->application->modelsDir,
+
+]);
+
+$loader->registerNamespaces([
+    'Admin' => __DIR__ . '/../controllers/admin'
+]);
+
+$loader->register();
 
 // End of File
 // --------------------------------------------------------------------

@@ -5,76 +5,71 @@ use Phalcon\Db\Index;
 use Phalcon\Db\Reference;
 use Phalcon\Mvc\Model\Migration;
 
-class BlogCategoryMigration_100 extends Migration
+class GroupMigration_100 extends Migration
 {
 
     public function up()
     {
         $this->morphTable(
-            'blog_category',
+            'group',
             array(
             'columns' => array(
                 new Column(
                     'id',
                     array(
                         'type' => Column::TYPE_INTEGER,
+                        'unsigned' => true,
                         'notNull' => true,
                         'autoIncrement' => true,
-                        'size' => 11,
+                        'size' => 10,
                         'first' => true
                     )
                 ),
                 new Column(
-                    'title',
+                    'name',
                     array(
                         'type' => Column::TYPE_VARCHAR,
-                        'size' => 50,
+                        'notNull' => true,
+                        'size' => 255,
                         'after' => 'id'
                     )
                 ),
                 new Column(
-                    'deleted',
+                    'permissions',
                     array(
-                        'type' => Column::TYPE_BOOLEAN,
-                        'notNull' => true,
+                        'type' => Column::TYPE_TEXT,
                         'size' => 1,
-                        'after' => 'title'
+                        'after' => 'name'
                     )
                 ),
                 new Column(
                     'created_at',
                     array(
-                        'type' => Column::TYPE_DATETIME,
+                        'type' => Column::TYPE_DATE,
+                        'notNull' => true,
                         'size' => 1,
-                        'after' => 'deleted'
+                        'after' => 'permissions'
                     )
                 ),
                 new Column(
                     'updated_at',
                     array(
-                        'type' => Column::TYPE_DATETIME,
+                        'type' => Column::TYPE_DATE,
+                        'notNull' => true,
                         'size' => 1,
                         'after' => 'created_at'
-                    )
-                ),
-                new Column(
-                    'deleted_at',
-                    array(
-                        'type' => Column::TYPE_DATETIME,
-                        'size' => 1,
-                        'after' => 'updated_at'
                     )
                 )
             ),
             'indexes' => array(
                 new Index('PRIMARY', array('id')),
-                new Index('title', array('title'))
+                new Index('groups_name_unique', array('name'))
             ),
             'options' => array(
                 'TABLE_TYPE' => 'BASE TABLE',
                 'AUTO_INCREMENT' => '1',
                 'ENGINE' => 'InnoDB',
-                'TABLE_COLLATION' => 'utf8_general_ci'
+                'TABLE_COLLATION' => 'utf8_unicode_ci'
             )
         )
         );
