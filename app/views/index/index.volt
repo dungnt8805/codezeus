@@ -11,18 +11,21 @@
     <div class="twelve wide column">
         <div class="ui two column  aligned stackable divided grid">
             <div class="column">
-                <h2>
-                    <a href="https://github.com/mfauveau"><i class="github link circular icon"></i></a>
-                    <span class="fname">Matthieu</span> Fauveau
-                </h2>
-                <h2>
-                    <a href="https://github.com/jream"><i class="github link circular icon"></i></a>
-                    <span class="fname">Jesse</span> Boyer
-                </h2>
-                <h2>
-                    <a href="https://github.com/dansackett"><i class="github link circular icon"></i></a>
-                    <span class="fname">Dan</span> Sackett
-                    </h2>
+
+                <div class="ui segment row">
+                    <a href="https://github.com/mfauveau"><img class="ui image small floated left circular" src="{{ url('img/profile-matt.jpg') }}" alt="Matt"></a>
+                    <h2><span class="fname">Matthieu</span> Fauveau</h2>
+                </div>
+
+                <div class="ui segment row">
+                    <a href="https://github.com/jream"><img class="ui image small floated left circular" src="{{ url('img/profile-jesse.jpg') }}" alt="Jesse"></a>
+                    <h2><span class="fname">Jesse</span> Boyer</h2>
+                </div>
+
+                <div class="ui segment row">
+                    <a href="https://github.com/dansackett"><img class="ui image small floated left circular" src="{{ url('img/profile-dan.jpg') }}" alt="Dan"></a>
+                    <h2><span class="fname">Dan</span> Sackett</h2>
+                </div>
             </div>
             <div class="column main-github">
                 <a href="http://github.com/codezeus">
