@@ -7,5 +7,5 @@ Icon?
 Thumbs.db
 nbproject
 composer.lock
-app/config/live-api.php
-app/config/live-config.php
+app/config/api-overwrite.php
+app/config/config-overwrite.php
