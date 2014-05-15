@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Code Zeus</title>
-    <link rel="stylesheet" type="text/css" href="{{ url('third-party/semantic/css/semantic.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('third-party/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('third-party/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/style.css') }}">
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
@@ -17,8 +18,9 @@
 
 {% block intro %}{% endblock %}
 
-<div>{{ flash.output() }}</div>
-
+<div class="container">
+    <div class="col-md-12">{{ flash.output() }}</div>
+</div>
 {% include "partial/header.volt" %}
 
 {% block content %}{% endblock %}

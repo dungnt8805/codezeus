@@ -1,4 +1,9 @@
+<hr>
 
-<div id="footer" class="ui piled segment aligned center">
-  CodeZeus &copy<?=date('Y')?>
+<div class="container">
+    <div class="col-md-12 text-right">
+        &copy<?=date('Y')?> CodeZeus
+    </div>
 </div>
+
+<hr>
